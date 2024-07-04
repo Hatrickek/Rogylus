@@ -10,14 +10,14 @@
 #include <sol/state.hpp>
 
 namespace ox {
-class OX_SHARED $PROJECT_NAMEModule : public ModuleInterface {
+class OX_SHARED RogylusModule : public ModuleInterface {
 public:
-  ~$PROJECT_NAMEModule() override = default;
+  ~RogylusModule() override = default;
   void register_components(sol::state* state, const entt::locator<entt::meta_ctx>::node_type& ctx) override;
   void unregister_components(sol::state* state, const entt::locator<entt::meta_ctx>::node_type& ctx) override;
 };
 
 CREATE_MODULE_FUNC {
-  return new $PROJECT_NAMEModule;
+  return new RogylusModule;
 }
 }
