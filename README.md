@@ -1,9 +1,5 @@
-# Oxylus Project Template
-Github repository template for Oxylus projects. 
-
-## Usage
-Create a new repository using this template.  
-Right after creation a github action will run and rename the contents and directories using the repository name and PR the changes.
+# Rogylus
+Roguelike shoot 'em up game made in OxylusEngine
 
 ## Building
 Currently supported and tested compilers are only: MSVC and Clang
