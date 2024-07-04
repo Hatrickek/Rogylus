@@ -1,0 +1,22 @@
+name: Rename
+
+on:
+  push:
+    branches: [ main ]
+    paths-ignore:
+      - '**.md'
+      
+jobs:
+    rename:
+      runs-on: ubuntu-latest
+      steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          github-token: ${{ secrets.PAT }}
+      - name : renaming
+        uses: kota65535/github-template-rename-action@v1
+        with:
+          from-name: $PROJECT_NAME
+          to-name: ${{ github.event.repository.name }}
+          github-token: ${{ secrets.PAT }}
