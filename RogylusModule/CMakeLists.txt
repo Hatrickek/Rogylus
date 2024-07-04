@@ -1,4 +1,4 @@
-set(PRJ_NAME $PROJECT_NAMEModule)
+set(PRJ_NAME RogylusModule)
 
 # Source groups
 file(GLOB src_root "src/*.hpp" "src/*.cpp")
@@ -26,7 +26,7 @@ set_target_properties(${PRJ_NAME} PROPERTIES
 # Include directories
 target_include_directories(${PRJ_NAME} PUBLIC
     "${CMAKE_CURRENT_SOURCE_DIR}/src"
-    "${CMAKE_CURRENT_SOURCE_DIR}/../$PROJECT_NAME/src"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../Rogylus/src"
 )
 
 # Compile definitions

@@ -17,6 +17,6 @@ jobs:
       - name : renaming
         uses: kota65535/github-template-rename-action@v1
         with:
-          from-name: $PROJECT_NAME
+          from-name: Rogylus
           to-name: ${{ github.event.repository.name }}
           github-token: ${{ secrets.PAT }}

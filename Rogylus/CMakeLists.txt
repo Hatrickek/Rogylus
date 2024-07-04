@@ -1,4 +1,4 @@
-set(PRJ_NAME $PROJECT_NAME)
+set(PRJ_NAME Rogylus)
 
 # Source groups
 file(GLOB src_root "src/*.hpp" "src/*.cpp")
