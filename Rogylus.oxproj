@@ -1,5 +1,5 @@
 [project]
 name = "Rogylus"
-asset_directory = "Assets"
+asset_directory = "Rogylus/Assets"
 start_scene = ""
-module_name = "RogylusModule"
+module_name = "Rogylus/RogylusModule"

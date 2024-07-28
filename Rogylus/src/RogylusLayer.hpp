@@ -2,7 +2,7 @@
 #include <Core/Layer.hpp>
 #include <Scene/Scene.hpp>
 
-namespace $NAMESPACE {
+namespace rog {
 class RogylusLayer : public ox::Layer {
 public:
   RogylusLayer();
@@ -14,12 +14,10 @@ public:
 
   static RogylusLayer* get() { return _instance; }
 
-  static std::string get_assets_path(const std::string_view path) {
-    return ("Assets" / std::filesystem::path(path)).string();
-  }
-  
 private:
   ox::Shared<ox::Scene> _scene;
   static RogylusLayer* _instance;
+
+  void load_scene();
 };
-}
+} // namespace rog

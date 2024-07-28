@@ -20,7 +20,7 @@ set_target_properties(${PRJ_NAME} PROPERTIES
 # Include directories
 target_include_directories(${PRJ_NAME} PUBLIC
     "${CMAKE_CURRENT_SOURCE_DIR}/src"
-    "${CMAKE_CURRENT_SOURCE_DIR}/../${PRJ_NAME}/src"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../${PRJ_NAME}Module/src"
 )
 
 # Compile definitions
@@ -45,7 +45,9 @@ if (MSVC AND NOT CMAKE_CXX_COMPILER_ID STREQUAL "Clang")
 endif()
 
 # Copy assets folder
+if (EXISTS ${CMAKE_SOURCE_DIR}/${PRJ_NAME}/Assets)
 add_custom_command(TARGET ${PRJ_NAME} POST_BUILD COMMAND ${CMAKE_COMMAND} -E copy_directory ${CMAKE_SOURCE_DIR}/${PRJ_NAME}/Assets $<TARGET_FILE_DIR:${PRJ_NAME}>/Assets)
+endif()
 # Copy module
 if (WIN32)
 add_custom_command(TARGET ${PRJ_NAME} POST_BUILD COMMAND ${CMAKE_COMMAND} -E copy ${CMAKE_SOURCE_DIR}/${PRJ_NAME}/${PRJ_NAME}Module.dll $<TARGET_FILE_DIR:${PRJ_NAME}>)
