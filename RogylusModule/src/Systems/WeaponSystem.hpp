@@ -1,18 +1,14 @@
 #pragma once
 
 #include <Core/Systems/System.hpp>
-#include <Scene/Scene.hpp>
-#include <Utils/Log.hpp>
-
-#include <entt/entity/entity.hpp>
-#include <imgui.h>
 
 namespace rog {
-class EnemySystem : public ox::System {
+class WeaponSystem : public ox::System {
   void on_init(ox::Scene* scene, entt::entity e) override;
 
   void on_fixed_update(float delta_time) override;
+  void on_imgui_render(const ox::Timestep& delta_time) override;
 
-  entt::entity _character = entt::null;
+  std::vector<std::string> _collisions = {};
 };
 } // namespace rog

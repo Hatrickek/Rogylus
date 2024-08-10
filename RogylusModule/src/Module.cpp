@@ -9,6 +9,7 @@
 #include "Systems/CharacterSystem.hpp"
 #include "Systems/EnemySystem.hpp"
 #include "Systems/GameManagerSystem.hpp"
+#include "Systems/WeaponSystem.hpp"
 
 namespace ox {
 void RogylusModule::init(App* app_instance, ImGuiContext* imgui_context) {
@@ -30,11 +31,13 @@ void RogylusModule::register_cpp_systems(SystemManager* system_manager) {
   system_manager->register_system<rog::CharacterSystem>();
   system_manager->register_system<rog::EnemySystem>();
   system_manager->register_system<rog::GameManagerSystem>();
+  system_manager->register_system<rog::WeaponSystem>();
 }
 
 void RogylusModule::unregister_cpp_systems(SystemManager* system_manager) {
   system_manager->unregister_system<rog::CharacterSystem>();
   system_manager->unregister_system<rog::EnemySystem>();
   system_manager->unregister_system<rog::GameManagerSystem>();
+  system_manager->unregister_system<rog::WeaponSystem>();
 }
 } // namespace ox

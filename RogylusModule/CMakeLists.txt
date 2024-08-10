@@ -1,7 +1,7 @@
 set(PRJ_NAME RogylusModule)
 
 # Source groups
-file(GLOB src_root "src/*.hpp" "src/*.cpp")
+file(GLOB_RECURSE src_root "src/*.hpp" "src/*.cpp")
 source_group("src" FILES ${src_root})
 set(ALL_FILES ${src_root})
 
